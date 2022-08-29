@@ -8,7 +8,10 @@ the freezing temperatures (the temperatures that are below 0).
  * @param {number[]} temperatures
  */
 function getPositiveTemperatures(temperatures) {
-
+let temperatureArray = temperatures.filter(function(temperature) {
+    return temperature < 0;
+})
+return temperatureArray;
 }
 
 // Sample usage - do not modify
