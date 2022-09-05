@@ -8,8 +8,8 @@ Rewrite it as an arrow function.
 /**
  * @param {number} value
  */
-function triple() {
-
+const triple = (num) => {
+    return num * 3;
 }
 
 // Sample usage - do not change

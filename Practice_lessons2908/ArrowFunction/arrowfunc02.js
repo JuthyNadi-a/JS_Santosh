@@ -8,8 +8,8 @@ Fix that without using an if condition.
 /**
  * @param {number[]} userIds
  */
-function logUserIds() {
-
+const logUserIds = (userIds = []) => {
+    console.log(userIds);
 }
 
 // Sample usage - do not modify
