@@ -9,7 +9,9 @@ Fix that without using an if condition.
  * @param {number[]} userIds
  */
 const logUserIds = (userIds = []) => {
-    console.log(userIds);
+    userIds.forEach(userId => {
+        console.log(userId);
+    })
 }
 
 // Sample usage - do not modify

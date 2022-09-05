@@ -26,3 +26,22 @@ let people = ["Sergei", "Mariia", "Boris", "Abel"];
 
   const people = ["Sergei", "Mariia", "Boris", "Abel"];
   
+/*   1. Using a loop, iterate through this array and console.log all of the people (also rewrite it using arrow function). */
+for (let i = 0; i <people.length; i++) {
+    console.log(people[i]);
+}
+people.forEach(element => {
+    console.log(element)
+})
+
+/* 2. Write the command to remove "Sergei" from the array. */
+people.shift();
+console.log(people);
+
+/* 3. Write the command to remove "Abel" from the array. */
+
+people.pop();
+console.log(people);
+
+/* 4. Write the command to add "Mahalete" to the front of the array. */
+
