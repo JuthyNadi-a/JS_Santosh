@@ -7,7 +7,13 @@ and false otherwise.
  * @param {boolean} code
  */
 
-function isPromoCodeValid() {}
+function isPromoCodeValid() {
+  if (code.value.length >= 5 && code.value.length<= 10) {
+    return true
+  } else {
+    return false
+  }
+}
 
 // Sample usage - do not modify
 const code = document.querySelector('#promo-code');

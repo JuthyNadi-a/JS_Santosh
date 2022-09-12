@@ -2,39 +2,61 @@
  * @param {array} grades
  * @param {number} grade
  */
-function addGrade(grades, grade) {}
+function addGrade(grades, grade) {
+  grades.push(grade);
+  return grades;
+}
 
 /**
  * @param {array} grades
  */
-function getNumberOfGrades(grades) {}
+function getNumberOfGrades(grades) {
+  return grades.length;
+}
 
 /**
  * @param {array} grades
  */
-function getFirstGrade(grades) {}
+function getFirstGrade(grades) {
+  return grades[0];
+}
 
 /**
  * @param {array} grades
  */
-function getLastGrade(grades) {}
+function getLastGrade(grades) {
+  return grades[grades.length-1];
+}
 
 /**
  * @param {array} grades
  */
-function isTestTooEasy(grades) {}
+function isTestTooEasy(grades) {
+  let max = Math.max.apply(Math, grades);
+  console.log(max);
+  if (max = 20) {
+    return 'too easy'
+  } else {
+    return 'hard'
+  }
+}
 
 /**
  * @param {array} grades
  * @param {number} grade
  */
-function gradeExists(grades, grade) {}
+function gradeExists(grades, grade) {
+  return grades.includes(grade, 0)
+}
 
 /**
  * @param {array} grades
  */
-function exportCSV(grades) {}
-
+function exportCSV(grades) {
+   grades.map(yourGrade => yourGrade.value);
+   return grades;
+}
+ 
 //
 // Sample usage do not modify below this line
 let gradesForm = document.querySelector('#grades-form');
