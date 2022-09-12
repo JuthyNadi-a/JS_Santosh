@@ -78,3 +78,27 @@ const dimensions1 = [20, 5]// create variables
 const [width1, height1] = dimensions1;// log them
 console.log(width1); //20
 console.log(height1); //5
+
+/* concat, spread operator */
+const lat = [5.234];
+const lng = [1.412];
+const point = [...lat, ...lng];
+console.log(point); // [5.234, 1.412];
+
+/* Object desturcture, concat */
+const config = {    
+    id: 1,    
+    isAdmin: false,    
+    theme: {        
+        dark: false,        
+        accessibility: true    
+    }
+};
+
+/* const id = config.id;
+const isAdmin = config.isAdmin;
+const theme = config.theme; */
+
+/* destructure */
+const {id, isAdmin, theme} = config;
+console.log(id, isAdmin, theme);
