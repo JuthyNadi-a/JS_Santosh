@@ -64,3 +64,17 @@ const allAbove15 = numbers.every(number => number >= 15); // false
 const numbers1 = [15, 10, 20];
 const someOver18 = numbers.some(number => number >= 18); // true
 const someUnder10 = numbers.some(number => number < 10); // false
+
+/* Array destructuring */
+
+const dimensions = [20, 5]// create variables
+const width = dimensions[0];
+const height = dimensions[1];// log them
+console.log(width); //20
+console.log(height); //5
+
+/* destructure */
+const dimensions1 = [20, 5]// create variables
+const [width1, height1] = dimensions1;// log them
+console.log(width1); //20
+console.log(height1); //5
