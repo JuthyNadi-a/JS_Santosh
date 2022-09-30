@@ -1,5 +1,9 @@
 body {
     background-color: antiquewhite;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    margin-top: 10px;
 }
 img {
     height: 150px;
