@@ -3,10 +3,30 @@ body {
     display: grid;
     align-items: center;
     justify-items: center;
-    margin-top: 10px;
+    margin-top: 300px;
 }
 img {
     height: 150px;
     width: 150px;
     border-radius: 50%;
+}
+label {
+    margin-right: 3rem;
+    font-size: 1.5rem;
+}
+input {
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 8px;
+    border: none;
+}
+#userPass {
+    margin-left: 56px;
+}
+button {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    border: none;
+    margin-top: 1rem;
 }
