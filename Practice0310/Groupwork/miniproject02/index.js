@@ -54,11 +54,50 @@ fetch/FetchWrapper related code after you get it to work the first time. */
 // Whenever the user choose a new value for the base currency, you need to call the getConversionRates function.
 // Test it out in the browser tab.
 
-let baseURL = ('https://v6.exchangerate-api.com/v6/18d6ec30ccb17bfb3f859e44/latest/USD')
-const getRateData = async() => {
+const baseCurrency = document.querySelector('#base-currency');
+const targetCurrency = document.querySelector('#target-currency');
+const convertedCurrency = document.querySelector('#conversion-result')
+
+/* const getRateData = async() => {
+ let targetValue = target.value; 
+  let baseURL = ('https://v6.exchangerate-api.com/v6/18d6ec30ccb17bfb3f859e44/latest/USD')
   const res = await fetch(baseURL)
   const data =  res.json()
-  const result = data
-  console.log(result);
+  console.log(data);
+} */
+
+/* const getRateData = () => {
+  const base = baseCurrency.options[baseCurrency.selectedIndex].value
+  let baseURL = ('https://v6.exchangerate-api.com/v6/18d6ec30ccb17bfb3f859e44/latest/USD')
+  
+  fetch(baseURL).then((response) => {
+    return response.json()
+  }).then((data) => {
+    console.log(data.conversion_rates);
+    const new_rate = data.conversion_rates[targetCurrency]
+    console.log(new_rate);
+  })
 }
-getRateData();
+getRateData(); */
+
+
+const convert = document.getElementById("convert");
+const result = document.getElementById("result");
+const from = document.getElementById("from");
+const to = document.getElementById("to");
+const amount = document.getElementById("amount");
+  convert.addEventListener("click", function() {
+      let fromCurrency = from.value;
+      let toCurrency = to.value;
+      let amt = amount.value;
+      fetch(`https://api.exchangerate-api.com/v4/latest/${fromCurrency}`)
+      .then(response => {
+            return response.json();
+      })
+      .then(data => {
+        let rate = data.rates[toCurrency];
+        let total = rate * amt;
+        result.innerHTML = `${amt} ${fromCurrency} = ${total}
+        ${toCurrency}`;
+      });
+  });
