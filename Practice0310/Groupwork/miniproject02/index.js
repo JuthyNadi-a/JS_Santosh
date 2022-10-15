@@ -81,16 +81,16 @@ const convertedCurrency = document.querySelector('#conversion-result')
 getRateData(); */
 
 
-const convert = document.getElementById("convert");
-const result = document.getElementById("result");
-const from = document.getElementById("from");
-const to = document.getElementById("to");
+const convert = document.querySelector("#convert");
+const result = document.querySelector("#result");
+const from = document.querySelector("#base-currency");
+const to = document.querySelector("#target-currency");
 const amount = document.getElementById("amount");
   convert.addEventListener("click", function() {
       let fromCurrency = from.value;
       let toCurrency = to.value;
       let amt = amount.value;
-      fetch(`https://api.exchangerate-api.com/v4/latest/${fromCurrency}`)
+      fetch(`https://v6.exchangerate-api.com/v6/18d6ec30ccb17bfb3f859e44/latest/${fromCurrency}`)
       .then(response => {
             return response.json();
       })

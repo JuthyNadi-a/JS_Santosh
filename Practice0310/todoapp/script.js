@@ -42,7 +42,7 @@ data.forEach(item => {
 
 
 //event listener for click button
-btn.addEventListener('click', fucntion = () => {
+btn.addEventListener('click', function()  {
     localStorage.clear();
     while (ul.firstChild) {
         ul.removeChild(ul.firstChild)
